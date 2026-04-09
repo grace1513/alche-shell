@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script displays the current directory contents in list format,
+# showing only the part of each filename after the first dash
+
+for file in *
+do
+    # Skip hidden files (not needed since * already ignores them, but kept safe)
+    name="$file"
+
+    # Remove everything up to and including the first dash
+    echo "${name#*-}"
+done
