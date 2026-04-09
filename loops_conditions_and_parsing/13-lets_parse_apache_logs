@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-awk '{print $1, $9}' apache-access.log
+# Displays IP address and HTTP status code from Apache logs using awk
+
+awk '{ if (NF >= 9) print $1, $9 }' apache-access.log
